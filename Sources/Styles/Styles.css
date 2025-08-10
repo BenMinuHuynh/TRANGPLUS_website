@@ -1,0 +1,154 @@
+/* !Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@500;900&family=Podkova:wght@800&family=Quicksand:wght@500&display=swap');
+
+@font-face{
+    font-family: Authentica;
+    src: url(Sources/fonts/Authentica.ttf);
+}
+
+/*! setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', serif;
+}
+
+::selection{
+    color:white;
+    background-color: var(--logo_color);
+    text-shadow: none;
+}
+
+/*! variables */
+:root{
+    /* color set */
+    --darkest_blue: #1A2A80;
+    --darker_blue: #3B38A0;
+    --ligher_blue: #7A85C1;
+    --lightest_blue: #B2B0E8;
+}
+
+/* !Set up tags */
+h1,h2{
+    font-family: 'Podkova', serif;
+    margin: 0
+}
+
+h3{
+    font-family: 'Aleo', serif;
+}
+
+p{
+    font-family: 'Quicksand', serif;
+    display: block;
+    margin: 0 !important;
+}
+
+a{
+    font-family: 'Quicksand', serif;
+    text-decoration: none;
+    color: inherit;
+    /* inherit, which means it takes its own parent's color */
+}
+
+ul{
+    font-family: 'Quicksand', serif;
+    list-style-type: none;
+}
+
+.active{
+    color: var(--darkest_blue);
+}
+
+.hidden{
+    display: none;
+}
+
+/* !Header */
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 56px;
+    box-shadow: 0 -5px 25px 0 black;
+}
+
+header .logo img{
+    height: 100%;
+}
+
+header .navigation ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+    color: rgb(38,38,38);
+}
+
+header .navigation ul .dropdown{
+    position: relative;
+}
+
+header .navigation ul .dropdown::before,
+header .navigation ul .dropdown::after
+{
+    display: block;
+    position: absolute;
+    z-index: 10;
+    transition: width 0.3s ease-in-out;
+    background-color: var(--darkest_blue);
+    width: 0;
+    height: 2.5px;
+    bottom: 0;
+    content: ' ';
+}
+
+header .navigation ul .dropdown::before{     
+    left: 50%;
+    bottom: 0;
+    transform-origin: right;
+}
+
+header .navigation ul .dropdown::after{
+    right: 50%;
+    bottom: 0;
+    transform-origin: left;
+}
+
+header .navigation ul .dropdown:hover::before,
+header .navigation ul .dropdown:hover::after{
+    width: 50%;
+}
+
+header .navigation ul .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+header .navigation ul .dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+    border: none;
+    min-width: 160px;
+    z-index: 1;
+}
+
+header .navigation ul .dropdown .dropdown-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+header .navigation ul .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+header .navigation .dropdown .dropdown-menu a:hover{
+    color: var(--darkest_blue);
+    text-decoration: underline;
+}
