@@ -524,99 +524,49 @@ body .shop .container:hover img{
 
 footer{
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     color: white;
     padding: 4rem;
     background-color: var(--neutral_black);
 }
 
+footer .logo{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding-left: 10rem;
+}
+
+footer .logo h1{
+    font-size: 50px;
+}
+
+footer .logo .sm{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+footer .logo .sm i{
+    font-size: 25px;
+}
+
 footer .contact{
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     width: fit-content;
-    background-color: red;
 }
 
 footer .contact h2{
+    font-size: 25px;
+}
+
+footer .contact h3{
     font-size: 20px;
-}
-
-.input-control {
-    position: relative;
-    margin: 20px 0 40px;
-    width: 190px;
-    background-color: transparent;
-    border: 0;
-}
-
-.input-control input {
-    background-color: transparent;
-    border: 0;
-    border-bottom: 2px white solid;
-    display: block;
-    width: 100%;
-    padding: 10px 0;
-    font-size: 18px;
-    color: white;
-}
-
-.input-control input:focus,
-.input-control input:valid {
-    outline: 0;
-    border-bottom-color: white;
-}
-
-.input-control label {
-    display: flex;
-    position: absolute;
-    top: 15px;
-    left: 0;
-    pointer-events: none;
-}
-
-.input-control label span {
-    display: inline-block;
-    font-size: 18px;
-    min-width: 5px;
-    color: white;
-    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.input-control input:focus+label span,
-.input-control input:valid+label span {
-    color: white;
-    transform: translateY(-30px);
-}
-
-.button7 {
-    background-color: transparent;
-    color: #fff;
-    width: fit-content;
-    padding-inline: 5px;
-    border: var(--darkest_blue) 0.2em solid;
-    border-radius: 11px;
-    text-align: left;
-    transition: all 0.6s ease;
-}
-
-.button7:hover {
-    background-color: var(--darkest_blue);
-    cursor: pointer;
-}
-
-.button7 svg {
-    width: 1.6em;
-    position: absolute;
-    display: flex;
-    transition: all 0.6s ease;
-}
-
-.button7:hover svg {
-    transform: translateX(5px);
-}
-
-.text7 {
-    margin-inline: 2em 0.5rem
+    font-weight: 500;
 }
