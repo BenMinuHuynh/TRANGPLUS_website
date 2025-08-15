@@ -74,12 +74,21 @@ header{
 }
 
 header .logo{
-    display: flex;
-    align-items: center;
+    height: 100%;
+    width: max-content;
+    padding: 5px;
 }
 
 header .logo img{
     height: 100%;
+}
+
+header .logo a{
+    font-size: 40px;
+    font-weight: 800;
+    align-self: center;
+    text-align: center;
+    color: black;
 }
 
 header .navigation ul{
@@ -166,9 +175,39 @@ body .header_background{
     position: absolute;
     width: 100%;
     height: 740px;
-    background-color: red;
     inset: 0%;
     z-index: 0;
+}
+
+body .header_background .content{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem;
+    width: 100%;
+    height: 100%;
+    color: white;
+    z-index: 2;
+    inset: 0%;
+}
+
+body .header_background .content label{
+    font-weight: 500;
+    font-size: 20px;
+    background-color: var(--darkest_blue);
+    width: fit-content;
+    padding-inline: 1rem;
+}
+
+body .header_background .content h1{
+    font-size: 80px;
+}
+
+body .header_background .content p{
+    font-weight: 600;
+    font-size: 25px;
 }
 
 body .header_background-overlay{
@@ -180,7 +219,6 @@ body .header_background-overlay{
 
 body .container-fc{
     height: 740px;
-    background-color: red;
 }
 
 body .header_background img{
@@ -203,6 +241,10 @@ body .about{
 
 body .about h2{
     font-size: 38px;
+}
+
+body .about p{
+    font-size: 20px;
 }
 
 .custom-shape-divider-bottom-1754800281 {
@@ -255,11 +297,12 @@ swiper-container {
         font-size: 18px;
         border-radius: 15px !important;
         display: flex;
-        background-color: black;
         justify-content: center;
         align-items: center;
         align-self: center;
+        background-color: black;
         transition: transform 0.5s ease-in;
+        z-index: 0;
     }
 
     .swiper-slide-hover{
@@ -537,11 +580,14 @@ footer .logo{
     flex-direction: column;
     text-align: center;
     align-items: center;
+    height: 100%;
+    width: 25%;
     padding-left: 10rem;
 }
 
-footer .logo h1{
-    font-size: 50px;
+footer .logo img{
+    width: 100%;
+    height: 100%;
 }
 
 footer .logo .sm{
